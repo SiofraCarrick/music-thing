@@ -1,8 +1,10 @@
 #pip install python-vlc
 
 import tkinter as tk
+
+from time_label import TimeLabel
 from vlc_player import VLCPlayer
-from playback_controls.py import PlaybackControls
+from playback_controls import PlaybackControls
 
 
 class MainApp:
@@ -10,7 +12,8 @@ class MainApp:
     def __init__(self, root):
         self.root = root
         self.root.title("VLC Music Player")
-        self.root.geometry("400x250")
+        self.root.geometry("800x480")
+        self.root.configure(bg='#39395a')
 
         self.player = VLCPlayer()
         self.time_label_widget = tk.Label(self.root, text="00:00 / 00:00")

@@ -11,6 +11,7 @@ class VLCPlayer:
     def load_media(self, file_path):
         self.media = self.instance.media_new(file_path)
         self.player.set_media(self.media)
+        self.play()
 
     def play(self):
         if self.media:
